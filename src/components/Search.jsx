@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { products } from "../data/products"
-import ProductCard from "../components/ProductCard"
+
 import "../styles/search.css"
+import ProductCard from "./Productcard"
 
 function Search(){
 
