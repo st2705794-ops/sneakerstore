@@ -1,0 +1,121 @@
+
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:#c3b6b6;
+color:rgb(207, 65, 82);
+font-weight: bolder;
+flex-wrap:wrap;
+}
+
+.navbar h2{
+font-size:24px;
+letter-spacing:2px;
+}
+
+/* links container */
+.navbar div{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+/* navbar links */
+.navbar a{
+color:white;
+text-decoration:none;
+font-size:16px;
+position:relative;
+padding:5px 0;
+transition:0.3s;
+}
+
+/* hover underline animation */
+.navbar a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-3px;
+width:0%;
+height:2px;
+background:#624dff;
+transition:0.3s;
+}
+
+.navbar a:hover::after{
+width:100%;
+}
+
+.navbar a:hover{
+color:#101da8;
+}
+
+/* cart badge feel */
+.navbar a:last-child{
+background:#8d7f8b;
+padding:6px 12px;
+border-radius:6px;
+}
+
+.navbar a:last-child:hover{
+background:#3633ff;
+color:white;
+}
+
+
+/* cart icon */
+
+.cart-icon{
+position:relative;
+display:flex;
+align-items:center;
+}
+
+.cart-icon img{
+width:28px;
+height:28px;
+cursor:pointer;
+}
+
+/* cart badge */
+
+.cart-count{
+position:absolute;
+top:-6px;
+right:-10px;
+background:rgb(15, 194, 51);
+color:white;
+font-size:12px;
+padding:2px 6px;
+border-radius:50%;
+font-weight:bold;
+}
+
+/* ------------------ */
+/* Responsive Design  */
+/* ------------------ */
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.navbar div{
+flex-direction:column;
+width:100%;
+margin-top:10px;
+gap:10px;
+}
+
+.navbar a{
+width:100%;
+padding:8px 0;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+}

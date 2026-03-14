@@ -1,0 +1,47 @@
+/* moving text */
+
+.moving-text{
+white-space: nowrap;
+overflow: hidden;
+display: block;
+width: 100%;
+font-size: 30px;
+font-weight: bolder;
+color: #10379a;
+margin: 20px 0;
+animation: moveText 8s linear infinite;
+}
+
+/* animation */
+
+@keyframes moveText{
+
+0%{
+transform: translateX(40%);
+}
+
+100%{
+transform: translateX(-40%);
+}
+
+}
+
+/* responsive */
+
+@media(max-width:768px){
+
+.moving-text{
+font-size:22px;
+animation-duration:8s;
+}
+
+}
+
+@media(max-width:480px){
+
+.moving-text{
+font-size:18px;
+animation-duration:7s;
+}
+
+}
