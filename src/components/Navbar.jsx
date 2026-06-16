@@ -1,20 +1,24 @@
-
-
 import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
+import { useState } from "react"
 import "../styles/navbar.css"
 
 function Navbar(){
 
 const cart = useSelector(state=>state.cart)
+const [open,setOpen] = useState(false)
 
 return(
 
 <nav className="navbar">
 
-<h1> <strong> <italic>SneakerStore </italic></strong></h1>
+<h1><i>SneakerStore</i></h1>
 
-<div>
+<div className="menu-btn" onClick={()=>setOpen(!open)}>
+☰
+</div>
+
+<div className={open ? "nav-links active" : "nav-links"}>
 
 <Link to="/">Home</Link>
 <Link to="/about">About</Link>
@@ -43,4 +47,4 @@ alt="cart"
 
 }
 
-export default Navbar ;
+export default Navbar;          

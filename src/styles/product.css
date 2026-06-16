@@ -31,7 +31,7 @@
   padding:8px 15px;
   border:none;
   border-radius:6px;
-  background:#ff4d4d;
+  background:#2fc23e;
   color:white;
   cursor:pointer;
   transition:0.3s;
@@ -74,4 +74,4 @@
     width:120px;
     height:120px;
   }
-}
+} 

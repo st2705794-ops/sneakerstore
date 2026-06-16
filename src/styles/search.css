@@ -10,6 +10,7 @@ padding:20px;
 text-align:center;
 margin-bottom:25px;
 font-size:28px;
+color:#786dbc;
 }
 
 /* search input */
@@ -28,7 +29,7 @@ transition:0.3s;
 }
 
 .search:focus{
-border-color:#ff4d4d;
+border-color:#b80808;
 box-shadow:0 0 5px rgba(255,77,77,0.5);
 }
 
@@ -65,7 +66,7 @@ object-fit:contain;
 margin-bottom:10px;
 }
 
-/* title */
+/* title */   
 
 .card h3{
 font-size:16px;
@@ -93,4 +94,4 @@ transition:0.3s;
 
 .card button:hover{
 background:#e60000;
-}
+}   

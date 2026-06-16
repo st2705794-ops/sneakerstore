@@ -4,7 +4,8 @@ id:2,
 category:"men",
 title:"Adidas shoes",
 price:6500,
-img:"https://i.pinimg.com/1200x/e3/6c/86/e36c861365f4bb24afcb4e2d9f869683.jpg"
+img:"https://i.pinimg.com/1200x/e3/6c/86/e36c861365f4bb24afcb4e2d9f869683.jpg",
+  
 },
 
 {
@@ -110,4 +111,4 @@ img:"https://i.pinimg.com/1200x/6b/82/c9/6b82c995ee2e5393609f1c1692b3f58d.jpg"
 },
 
 
-]
+]   

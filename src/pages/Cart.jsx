@@ -27,7 +27,7 @@ function Cart() {
               fontSize:"16px"
             }}
             onClick={() => navigate("/")}
-          >
+          >   
             Continue Shopping
           </button>
         </div>

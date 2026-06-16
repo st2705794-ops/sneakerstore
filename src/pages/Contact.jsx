@@ -1,67 +1,67 @@
-import { useState } from "react";
+import { useState } from "react"
 import "../styles/contact.css"
 
 function Contact(){
 
-const [formData, setFormData] = useState({
-  name:"",
-  email:"",
-  message:""
+const [formData,setFormData] = useState({
+name:"",
+email:"",
+message:""
 })
 
-const handleChange = (e)=>{
-  const {name, value} = e.target;
-
-  setFormData({
-    ...formData,
-    [name]:value
-  })
+function handleChange(e){
+setFormData({
+...formData,
+[e.target.name]:e.target.value
+})
 }
 
-const handleSubmit = (e)=>{
-  e.preventDefault();
+function handleSubmit(e){
+e.preventDefault()
 
-  localStorage.setItem("contactData", JSON.stringify(formData))
+localStorage.setItem("contactData",JSON.stringify(formData))
 
-  alert("Data Saved in Local Storage")
+alert("Message Saved Successfully ✅")
 
-  setFormData({
-    name:"",
-    email:"",
-    message:""
-  })
+setFormData({
+name:"",
+email:"",
+message:""
+})
 }
 
 return(
 
-<div className="container">
-
-<h1>Contact Us</h1>
+<div className="contact-container">
 
 <form className="contact-form" onSubmit={handleSubmit}>
 
-<input 
-type="text" 
+<h2>Contact Us</h2>
+
+<input
+type="text"
 name="name"
-placeholder="Your Name"
+placeholder="Enter your name"
 value={formData.name}
 onChange={handleChange}
+required
 />
 
-<input 
-type="email" 
+<input
+type="email"
 name="email"
-placeholder="Your Email"
+placeholder="Enter your email"
 value={formData.email}
 onChange={handleChange}
-/>   
+required
+/>
 
-
-<textarea 
+<textarea
 name="message"
-placeholder="Your Message"
+placeholder="Enter your message"
 value={formData.message}
 onChange={handleChange}
+required
 />
 
 <button type="submit">Send Message</button>

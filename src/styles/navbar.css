@@ -1,30 +1,45 @@
-
+/* navbar */
 
 .navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 30px;
-background:#c3b6b6;
-color:rgb(207, 65, 82);
-font-weight: bolder;
-flex-wrap:wrap;
+background:#4a4444;
+color:rgb(207,65,82);
+font-weight:bolder;
+position:relative;
 }
 
-.navbar h2{
+/* logo */
+
+.navbar h1{
 font-size:24px;
 letter-spacing:2px;
+color: #f7f1f1;
+/* font-weight: bold; */
 }
 
-/* links container */
-.navbar div{
+/* menu button */
+
+.menu-btn{
+display:none;
+font-size:28px;
+cursor:pointer;
+color:white;
+}
+
+/* nav links container */
+
+.nav-links{
 display:flex;
 align-items:center;
 gap:20px;
 }
 
 /* navbar links */
-.navbar a{
+
+.nav-links a{
 color:white;
 text-decoration:none;
 font-size:16px;
@@ -34,7 +49,8 @@ transition:0.3s;
 }
 
 /* hover underline animation */
-.navbar a::after{
+
+.nav-links a::after{
 content:"";
 position:absolute;
 left:0;
@@ -45,26 +61,13 @@ background:#624dff;
 transition:0.3s;
 }
 
-.navbar a:hover::after{
+.nav-links a:hover::after{
 width:100%;
 }
 
-.navbar a:hover{
+.nav-links a:hover{
 color:#101da8;
 }
-
-/* cart badge feel */
-.navbar a:last-child{
-background:#8d7f8b;
-padding:6px 12px;
-border-radius:6px;
-}
-
-.navbar a:last-child:hover{
-background:#3633ff;
-color:white;
-}
-
 
 /* cart icon */
 
@@ -86,7 +89,7 @@ cursor:pointer;
 position:absolute;
 top:-6px;
 right:-10px;
-background:rgb(15, 194, 51);
+background:rgb(15,194,51);
 color:white;
 font-size:12px;
 padding:2px 6px;
@@ -94,27 +97,56 @@ border-radius:50%;
 font-weight:bold;
 }
 
-/* ------------------ */
-/* Responsive Design  */
-/* ------------------ */
+/* cart link style */
+
+.nav-links a.cart-icon{
+background:#8d7f8b;
+padding:6px 12px;
+border-radius:6px;
+}
+
+.nav-links a.cart-icon:hover{
+background:#3633ff;
+color:white;
+}
+
+/* -------------------- */
+/* Responsive Navbar */
+/* -------------------- */
 
 @media(max-width:768px){
 
-.navbar{
-flex-direction:column;
-align-items:flex-start;
+.menu-btn{
+display:block;
 }
 
-.navbar div{
-flex-direction:column;
+/* hide menu by default */
+
+.nav-links{
+position:absolute;
+top:70px;
+left:0;
 width:100%;
-margin-top:10px;
-gap:10px;
+background:#c3b6b6;
+flex-direction:column;
+align-items:center;
+gap:15px;
+padding:20px 0;
+display:none;
 }
 
-.navbar a{
+/* show when active */
+
+.nav-links.active{
+display:flex;
+}
+
+/* links full width */
+
+.nav-links a{
 width:100%;
-padding:8px 0;
+text-align:center;
+padding:10px 0;
 border-bottom:1px solid rgba(255,255,255,0.2);
 }
 

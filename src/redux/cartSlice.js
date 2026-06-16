@@ -8,21 +8,6 @@ initialState: [],
 
 reducers: {
 
-// addToCart: (state, action) => {
-
-// const exist = state.find(item => item.id === action.payload.id);
-
-// if (exist) {
-
-// exist.qty += 1;
-
-// } else {
-
-// state.push({ ...action.payload, qty: 1 });
-
-// }
-
-// },
 addToCart: (state, action) => {
   const exist = state.find(item => item.id === action.payload.id);
   if (exist) {
@@ -48,7 +33,9 @@ item.qty += 1;
 
 }
 
-},
+},   
+
+
 
 decreaseQty: (state, action) => {
 
@@ -76,4 +63,4 @@ return state.filter(i => i.id !== action.payload);
 
 export const { addToCart, removeFromCart, increaseQty, decreaseQty } = cartSlice.actions;
 
-export default cartSlice.reducer;
+export default cartSlice.reducer;  
